@@ -1,0 +1,57 @@
+[tool.ruff]
+# Ruff configuration for code formatting and linting
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.format]
+# Use double quotes for strings
+quote-style = "double"
+# Use spaces for indentation
+indent-style = "space"
+# Respect magic trailing comma
+skip-magic-trailing-comma = false
+# Automatically detect the appropriate line ending
+line-ending = "auto"
+
+[tool.ruff.lint]
+# Enable specific rule sets
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # do not perform function calls in argument defaults
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["oracle", "oci"]
+
+[tool.pytest.ini_options]
+# Markers used by apps/agentic_rag integration tests. Declaring them here
+# silences PytestUnknownMarkWarning across the monorepo.
+markers = [
+    "integration: full-stack test requiring Oracle DB, Ollama, or a live server",
+    "requires_oracle: test needs a reachable Oracle DB",
+    "requires_ollama: test needs a reachable Ollama instance",
+    "requires_playwright: test needs Playwright + Chromium installed",
+]
+# Default run excludes integration tests so `pytest` stays fast for unit work.
+# Use `pytest -m integration` (or `pytest -m ""`) to run the full stack.
+addopts = "-m 'not integration'"
+
+[tool.prettier]
+# Prettier configuration (if using prettier via npm)
+printWidth = 100
+tabWidth = 2
+useTabs = false
+semi = true
+singleQuote = false
+trailingComma = "es5"
+bracketSpacing = true
+arrowParens = "always"

@@ -1,0 +1,232 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ignore common security keys
+.key
+.crt
+.csr
+.pem
+
+#temp directory ignore
+# deploy/
+service/python/Dockerfile
+
+.certs
+.artifacts
+deploy/k8s/backend/application.yaml
+deploy/k8s/overlays/prod/kustomization.yaml
+deploy/k8s/backend/wallet/
+
+generated/
+
+.env.json
+*.bkp
+*.zip
+kubeconfig
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+
+# Java
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.idea
+bin/
+dist/
+application-local.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Pre-commit
+.pre-commit-config.yaml.bak
+
+# Build artifacts
+*.min.js
+*.min.css
+*.map
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Oracle specific
+*.classpath
+*.project
+.settings/
+.wallet/
+
+# Logs
+*.log 
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+apps/agentic_rag/config.yaml
+
+apps/agentic_rag/chroma_db
+apps/agentic_rag/embeddings
+apps/agentic_rag/__pycache__/
+apps/agentic_rag/.pytest_cache/
+apps/agentic_rag/.gradio/
+apps/agentic_rag/openwebui_data/
+apps/agentic_rag/chunks.json
+apps/agentic_rag/embeddings/
+apps/agentic_rag/kubectl
+
+# avoid terraform lock files
+*.lock.hcl
+*.lock
+
+CLAUDE.md
+
+docs/plans/
+task_plan.md
+findings.md
+progress.md
+apps/agentic_rag/.serena/
+apps/agentic_rag/.webui_secret_key
+apps/agentic_rag/cot_chat_debug.json
+
+# Plan files in agentic_rag
+apps/agentic_rag/docs/plans/
+apps/agentic_rag/frontend/docs/plans/
+
+# choose-your-path local user testing — each user's scaffolded test projects
+# live here and are not meant to be committed.
+choose-your-path/tests/*
+!choose-your-path/tests/.gitkeep
+
+# Claude Code / AI tooling
+.playwright-mcp/
+.serena/
+**/.mcp.json
+.claude/
+.omc/
+.agents/
+.crush/
+.openhands/
+.cursorrules
+.cursorignore
+.cursorindexingignore
+
+# Test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime / session data
+**/data/sessions/
+
+# Compiled binaries
+apps/agent-reasoning/tui/agent-tui
+
+# Agent-reasoning app specifics
+apps/agent-reasoning/config.yaml
+apps/agent-reasoning/arena_report.md
+apps/agent-reasoning/benchmark_output.txt
+apps/agent-reasoning/simulation_demo.py
+apps/agent-reasoning/benchmarks/*_results.json
+apps/agent-reasoning/benchmarks/accuracy_full_*.json
+apps/agent-reasoning/benchmarks/accuracy_summary_*.tsv
+apps/agent-reasoning/benchmarks/results/
+
+# Notebook-specific
+notebooks/episodic
+notebooks/config.yaml
+
+# TanStack shoe store app: do not apply Python `lib/` or IDE `.vscode/` ignores to this Node app
+!apps/tanstack-shoe-store/src/lib/
+!apps/tanstack-shoe-store/src/lib/**
+!apps/tanstack-shoe-store/.vscode/
+
+choose-your-path/tests/
